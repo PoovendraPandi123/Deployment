@@ -151,7 +151,7 @@ class TransactionExternalRecords(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 
 class TransactionInternalRecords(models.Model):
@@ -303,7 +303,7 @@ class TransactionInternalRecords(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 class RecoSettings(models.Model):
     class Meta:
@@ -322,7 +322,7 @@ class RecoSettings(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
     def __str__(self):
         return self.setting_key
@@ -353,7 +353,7 @@ class RecoResults(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 class RecoExecutionLog(models.Model):
     class Meta:
@@ -401,7 +401,7 @@ class ReconFileUploads(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 class StagingExternalRecords(models.Model):
     class Meta:
@@ -552,7 +552,7 @@ class StagingExternalRecords(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 class StagingInternalRecords(models.Model):
     class Meta:
@@ -703,7 +703,7 @@ class StagingInternalRecords(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 class StagingRecoResults(models.Model):
     class Meta:
@@ -731,7 +731,7 @@ class StagingRecoResults(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 class ReportGeneration(models.Model):
     class Meta:
@@ -760,7 +760,7 @@ class VendorMaster(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
     def __str__(self):
         return self.vendor_name
@@ -781,7 +781,7 @@ class SettingQueries(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
     def __str__(self):
         return self.setting_key
@@ -804,7 +804,7 @@ class RecoExecutionTasks(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
     def __str__(self):
         return self.procedure_name
@@ -837,7 +837,7 @@ class VendorMatchingDetails(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)
 
 class MasterMatchingComments(models.Model):
     class Meta:
@@ -855,4 +855,4 @@ class MasterMatchingComments(models.Model):
     created_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
     created_date = models.CharField(max_length=64, verbose_name="Created Date", null=True)
     modified_by = models.PositiveSmallIntegerField(verbose_name="User Id", null=True)
-    modified_date = models.DateTimeField(max_length=64, verbose_name="Modified Date", null=True)
+    modified_date = models.CharField(max_length=64, verbose_name="Modified Date", null=True)

@@ -96,6 +96,9 @@ class MasterMatchingCommentsViewSet(viewsets.ModelViewSet):
     queryset = MasterMatchingComments.objects.all()
     serializer_class = MasterMatchingCommentsSerializer
 
+    def perform_create(self, serializer):
+        serializer.save(created_date = str(datetime.today()), modified_date = str(datetime.today()))
+
 def get_proper_file_name(file_name):
     try:
         file_name_extension = "." + file_name.split(".")[-1]
