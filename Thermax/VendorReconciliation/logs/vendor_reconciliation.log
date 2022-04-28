@@ -1,0 +1,55 @@
+[2022-04-26 17:46:16] ERROR Error in Getting Transaction Count!!!
+Traceback (most recent call last):
+  File "G:\AdventsProduct\V1.1.0\AFS\VendorReconciliation\vendorRecon\views.py", line 485, in get_transaction_count
+    external_count_proper = external_count.replace(
+UnboundLocalError: local variable 'external_count' referenced before assignment
+[2022-04-27 09:28:51] ERROR Error in File Upload !!!
+Traceback (most recent call last):
+  File "G:\AdventsProduct\V1.1.0\AFS\VendorReconciliation\vendorRecon\views.py", line 177, in get_file_upload
+    file_uploads_internal = ReconFileUploads.objects.filter(m_source_id = int_source_id, is_processed = 0)
+UnboundLocalError: local variable 'int_source_id' referenced before assignment
+[2022-04-27 09:32:55] ERROR Error in File Upload !!!
+Traceback (most recent call last):
+  File "G:\AdventsProduct\V1.1.0\AFS\VendorReconciliation\vendorRecon\views.py", line 177, in get_file_upload
+    file_uploads_internal = ReconFileUploads.objects.filter(m_source_id = int_source_id, is_processed = 0)
+UnboundLocalError: local variable 'int_source_id' referenced before assignment
+[2022-04-27 09:38:46] INFO Error Executing SQL Query!!
+Traceback (most recent call last):
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\user\Envs\django\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\user\Envs\django\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\user\Envs\django\lib\site-packages\MySQLdb\connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1136, "Column count doesn't match value count at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\AdventsProduct\V1.1.0\AFS\VendorReconciliation\vendorRecon\views.py", line 31, in execute_sql_query
+    cursor.execute(query)
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "C:\Users\user\Envs\django\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\user\Envs\django\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\user\Envs\django\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\user\Envs\django\lib\site-packages\MySQLdb\connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1136, "Column count doesn't match value count at row 1")

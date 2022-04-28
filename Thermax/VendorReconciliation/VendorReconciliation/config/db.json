@@ -1,0 +1,16 @@
+{
+	"db_modules": [{
+			"module": "main",
+			"credentials": {
+				"server": "localhost",
+				"user": "root",
+				"password": "admin@1234",
+				"database": "vendor_recon",
+				"options": "",
+				"port": "3306",
+				"default-character-set": "utf-8",
+				"engine": "django.db.backends.mysql"
+			}
+		}
+	]
+}
